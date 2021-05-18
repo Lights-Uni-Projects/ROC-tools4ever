@@ -1,5 +1,8 @@
+# Private key and a list for myself, no need to upload those
 *.ppk
+needs_fixing.txt
 
+# Svelte and build files
 .svelte/
 build/
 
