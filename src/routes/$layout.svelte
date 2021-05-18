@@ -2,21 +2,6 @@
 	import "../app.postcss";
 </script>
 
-<script context="module">
-	/**
-	 * @type {import('@sveltejs/kit').Load}
-	 */
-	export async function load({ session }) {
-		if (session.user) {
-				return {}
-			};
-		return {
-      		status: 403,
-      		error: new Error("Not logged in"),
-		}
-	}
-</script>
-
 
 <svelte:head>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
