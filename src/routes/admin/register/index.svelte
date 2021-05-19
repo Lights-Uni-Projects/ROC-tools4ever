@@ -19,7 +19,7 @@
     action="/admin/register/createAccount"
     class="mx-auto text-2xl text-center flex flex-col w-80 bg-gray-200 m-4 p-8 rounded-xl"
 >
-    <h2 class="text-3xl mb-6 font-bold">Creëer account</h2>
+    <h2 class="text-3xl mb-6">Creëer account</h2>
     <input
         class="border border-gray-900 p-1 mb-2"
         type="text"

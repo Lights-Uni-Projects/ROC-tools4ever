@@ -14,7 +14,7 @@
 	<div class="center float m-auto relative">
 		<!-- <p class="absolute right-16 top-1">{getName()} |</p> -->
 		<form class="text-right" method="POST" action="/logout">
-			<button class="underline text-black-700 absolute right-0 top-0 border-1 px-2" type="submit">Log uit</button>
+			<button class="underline text-black-700 absolute -right-2 top-0 border-1 px-2" type="submit">Log uit</button>
 		</form>
 		<h1 class="text-8xl text-center mb-0">ToolsForEver</h1>
 	</div>
