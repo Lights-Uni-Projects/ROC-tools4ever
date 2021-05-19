@@ -140,10 +140,10 @@
 
 	<label class="mx-1">
 		<select class="bg-gray-200 p-1" name="productToAdd">
-			<!-- <option value={null}>Producten</option>
+			<option value={null}>Producten</option>
 			{#each products as products}
 				<option value={products.id}>{products.name}</option>
-			{/each} -->
+			{/each}
 		</select>
 	</label>
 
