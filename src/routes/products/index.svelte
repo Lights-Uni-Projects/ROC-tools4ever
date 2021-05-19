@@ -129,18 +129,17 @@
 </div>
 
 
-<!-- Adding new products to the database -->
+<!-- Adding newly ordered products to the database -->
 <div class="border-2 mt-4 rounded-xl">
 	<form
 		method="POST"
 		action="/products/addProduct"
 		class="mx-auto text-center py-4"
 	>
-	<h2 class="mb-4 text-2xl">Voeg bestelde producten toe</h2>
+	<h2 class="mb-4 text-2xl">Voeg/Verwijder producten</h2>
 
 	<label class="mx-1">
 		<select class="bg-gray-200 p-1" name="productToAdd">
-			<option value={null}>Producten</option>
 			{#each products as products}
 				<option value={products.id}>{products.name}</option>
 			{/each}
@@ -149,17 +148,23 @@
 
 	<label class="mx-1">
 		<select class="bg-gray-200 p-1" name="warehouse">
-			<option value={null}>Locatie</option>
 			{#each warehouses as warehouse (warehouse.id)}
 				<option value={warehouse.id}>{warehouse.location}</option>
 			{/each}
 		</select>
 	</label>
 
-	<input type="number" class="border-2 w-32 py-1" name="productTotalOrdered" placeholder="Aantal besteld">
+	<input
+		type="number"
+		class="border-2 w-12 py-1"
+		name="productTotalOrdered"
+		placeholder="1"
+		min="-500"
+		max="500"
+	>
 
 	<button type="submit" class="bg-blue-200 hover:bg-blue-300 text-blue-700 ml-2 px-6 py-1">
-		Verstuur
+		Submit
 	</button>
 
 	</form>
@@ -172,7 +177,7 @@
     action="/products/createProduct"
     class="mx-auto text-center py-4"
 >
-		<h2 class="text-2xl mb-4 -mx-4">Creëer nieuw product</h2>
+		<h2 class="text-2xl mb-4 -mx-4">Nieuw product</h2>
 		<input
 			class="border-2"
 			type="text"
@@ -210,7 +215,31 @@
 		/>
 
 		<button type="submit" class="bg-blue-200 hover:bg-blue-300 text-blue-700 ml-2 px-6 py-1">
-			Voeg toe
+			Submit
 		</button>
 	</form>
 </div>
+
+<!-- Delete products from database -->
+<!-- Current errors with this:
+	- returns error "alert is not defined" -->
+<!-- <div class="border-2 mt-4 rounded-xl">
+	<form
+    method="POST"
+    action="/products/deleteProduct"
+    class="mx-auto text-center py-4"
+>
+		<h2 class="text-2xl mb-4 -mx-4">Verwijder product</h2>
+		<label class="mx-1">
+			<select class="bg-gray-200 p-1" name="productToAdd">
+				{#each products as products}
+					<option value={products.id}>{products.name}</option>
+				{/each}
+			</select>
+		</label>
+
+		<button type="submit" class="bg-blue-200 hover:bg-blue-300 text-blue-700 ml-2 px-6 py-1">
+			Submit
+		</button>
+	</form>
+</div> -->

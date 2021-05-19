@@ -1,5 +1,6 @@
 <script>
 	import "../app.postcss";
+	import { session } from "$app/stores";
 </script>
 
 
@@ -11,6 +12,7 @@
 
 <div class="container mx-auto">
 	<div class="center float m-auto relative">
+		<!-- <p class="absolute right-16 top-1">{getName()} |</p> -->
 		<form class="text-right" method="POST" action="/logout">
 			<button class="underline text-black-700 absolute right-0 top-1 border-1 px-2" type="submit">Log uit</button>
 		</form>
