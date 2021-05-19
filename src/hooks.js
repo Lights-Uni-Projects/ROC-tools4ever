@@ -11,7 +11,7 @@ export async function getContext({ headers }) {
         try {
             const user = await db.user.findUnique({
                 where: {
-                    id: +cookies.id
+                    id: +parseInt(cookies.id)
                 },
                 include: {
                     position: true
