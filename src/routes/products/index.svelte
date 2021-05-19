@@ -87,7 +87,7 @@
 		</label>
 
 		<label>
-			Niet op voorraad
+			Lage voorraad
 			<input type="checkbox" bind:checked={showOutofStock}>
 		</label>
 	</div>
@@ -136,7 +136,7 @@
 		action="/products/addProduct"
 		class="mx-auto text-center py-4"
 	>
-	<h2 class="mb-4 text-2xl">Voeg/Verwijder producten</h2>
+	<h2 class="mb-4 text-2xl">Bestelde product toevoegen of verwijderen</h2>
 
 	<label class="mx-1">
 		<select class="bg-gray-200 p-1" name="productToAdd">
